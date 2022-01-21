@@ -1,0 +1,19 @@
+Algorithm,Dataset,# of clusters,Cluster 1,Cluster 2,Cluster 3,Cluster 4,Cluster 5,Cluster 6,Cluster 7,Cluster 8,Cluster 9,Cluster 10,Average
+ImageNet,Face,6 clusters,1,0.5,0.95,0.75,1,0.95,,,,,0.858
+ImageNet,Face,8 clusters,1,1,1,0.75,0.95,0.6,0.95,0.95,,,0.9
+ImageNet,Face,10 clusters,0.7,1,0.85,0.9,1,1,0.8,1,0.55,0.85,0.865
+Places365,Face,6 clusters,0.35,0.9,0.7,0.75,1,0.85,,,,,0.758
+Places365,Face,8 clusters,0.95,0.65,1,1,0.8,1,0.75,1,,,0.894
+Places365,Face,10 clusters,0.5,1,1,0.95,1,0.95,0.8,0.6,1,1,0.88
+VGGFace,Face,6 clusters,1,0.85,1,1,1,0.65,,,,,0.916
+VGGFace,Face,8 clusters,1,0.85,0.85,1,1,1,1,0.95,,,0.956
+VGGFace,Face,10 clusters,0.95,0.95,1,1,1,0.8,1,0.65,0.85,0.9,0.91
+ImageNet,Climate,6 clusters,0.9,0.9,1,0.95,0.9,0.55,,,,,0.825
+ImageNet,Climate,8 clusters,0.9,0.95,1,0.95,0.95,0.2,1,0.95,,,0.863
+ImageNet,Climate,10 clusters,1,1,1,0.25,0.95,1,1,1,0.6,1,0.88
+Places365,Climate,6 clusters,1,1,1,1,1,1,,,,,1
+Places365,Climate,8 clusters,0.95,1,1,1,1,1,1,1,,,0.99
+Places365,Climate,10 clusters,0.95,1,1,1,1,0.9,0.95,1,0.95,1,0.975
+VGGFace,Climate,6 clusters,0.65,0.7,1,0.75,0.85,0.95,,,,,0.817
+VGGFace,Climate,8 clusters,0.8,0.75,1,0.8,0.4,0.95,1,0.4,,,0.763
+VGGFace,Climate,10 clusters,0.35,0.65,0.85,0.9,1,0.6,0.7,0.7,1,1,0.775
