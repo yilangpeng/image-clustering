@@ -25,7 +25,7 @@ Figures we we cannot replicate now:
 
 # Study 2A
 ## A1/2/3 feature extraction.py
-For each image, this script extracts features from a pre-trained model and saves features in the "img exfeature" folder. If you want to use the places365 model, please download the model from this [link](https://github.com/GKalliatakis/Keras-VGG16-places365) and place all the relevant scripts in the same folder. 
+There three files extract features from three pre-trained models and save features in the "img exfeature" folder. Please make sure to change the folder path in the scripts. If you want to use the places365 model, please download the model from this [link](https://github.com/GKalliatakis/Keras-VGG16-places365) and place all the relevant scripts in the same folder. 
 
 ## B combine features.py
 This script combines all the features into one file.
@@ -43,5 +43,4 @@ For each cluster in each clustering solution, this script randomly selects 20 im
 For each clustering solution, this script creates a figure that show the randomly selected 20 images in each cluster.
 
 # Study 2B
-The scripts are similar to the ones in study 2A.
-
+The scripts are similar to the ones in study 2A. Please make sure to change the folder path in the scripts.
