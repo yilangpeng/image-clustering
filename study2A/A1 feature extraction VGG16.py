@@ -2,36 +2,17 @@ import os, codecs, joblib, sys
 from keras.preprocessing import image
 from keras.models import Model
 from keras.applications.vgg16 import preprocess_input
-#from keras.applications import vgg16
 
 import numpy as np
 import ypoften as of
 
-# select the pretrained model
-cvmodel = "vgg16 places fc1"
-cvmodel = 'vggface fc6'
 cvmodel = "vgg16 fc1"
 
-if cvmodel == "vgg16 fc1":
-    from keras.applications.vgg16 import VGG16
-    img_size = (224, 224)
-    base_model = VGG16(weights= "imagenet", include_top=True)
-    feature_model = Model(base_model.input, base_model.get_layer('fc1').output)
-    print(feature_model.summary())
-
-if cvmodel == 'vggface fc6':
-    from keras_vggface.vggface import VGGFace
-    img_size = (224, 224)
-    vggface = VGGFace(model='vgg16')
-    feature_model = Model(vggface.input, vggface.get_layer('fc6').output)
-    print(feature_model.summary())
-
-if cvmodel == "vgg16 places fc1":
-    from vgg16_places_365 import VGG16_Places365
-    img_size = (224, 224)
-    base_model = VGG16_Places365(weights='places', include_top=True, input_shape=(224, 224, 3))
-    feature_model = Model(base_model.input, base_model.get_layer('fc1').output)
-    print(feature_model.summary())
+from keras.applications.vgg16 import VGG16
+img_size = (224, 224)
+base_model = VGG16(weights= "imagenet", include_top=True)
+feature_model = Model(base_model.input, base_model.get_layer('fc1').output)
+print(feature_model.summary())
 
 cwd = os.path.join('/Volumes/Athens/Analysis/Climate/Github',"")
 # please change this to the folder that has all the images
@@ -39,7 +20,7 @@ cwd = os.path.join('/Volumes/Athens/Analysis/Climate/Github',"")
 imgfile = os.path.join(cwd, 'img filename study2A.txt')
 imgfile = open(imgfile, 'r', encoding="utf-8")
 
-for j, line in enumerate(imgfile.readlines()[1:10]):
+for j, line in enumerate(imgfile.readlines()[1:]):
     user, shortcode, posttype, imgname = line.rstrip('\r\n').split('\t')[:4]
     print(j, imgname)
 
