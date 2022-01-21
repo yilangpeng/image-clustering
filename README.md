@@ -23,9 +23,9 @@ Figures we we cannot replicate now:
 - Fig 4 (bag of visual words)
 - FigB5 (resnet)
 
-# Study 2
-## A feature extraction.py
-For each image, this script extracts features from a pre-trained model and saves features in the "img exfeature" folder. If you want to use the hybrid model, please download the model from this [link](https://github.com/GKalliatakis/Keras-VGG16-places365) and place all the relevant scripts in the same folder. The script can also extract features from VGG16 model provided in the Keras package. 
+# Study 2A
+## A1/2/3 feature extraction.py
+For each image, this script extracts features from a pre-trained model and saves features in the "img exfeature" folder. If you want to use the places365 model, please download the model from this [link](https://github.com/GKalliatakis/Keras-VGG16-places365) and place all the relevant scripts in the same folder. 
 
 ## B combine features.py
 This script combines all the features into one file.
@@ -34,10 +34,14 @@ This script combines all the features into one file.
 This script conducts principal component analysis on the extract features.
 
 ## D kmeans clustering.py
-This script applies k-means clustering to the first 200 dimensions in PCA, with the number of clusters ranging from 5 to 20.
+This script applies k-means clustering to the first 200 dimensions in PCA, with the number of clusters ranging from 6, 8, to 10.
 
 ## E copy image.py
 For each cluster in each clustering solution, this script randomly selects 20 images and copies them to the "img cluster" folder.
 
 ## F visualize grid.py
 For each clustering solution, this script creates a figure that show the randomly selected 20 images in each cluster.
+
+# Study 2B
+The scripts are similar to the ones in study 2A.
+
