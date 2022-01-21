@@ -1,9 +1,10 @@
 
+This repository contains the replication files for article "Image Clustering: An Unsupervised Approach to Categorize Visual Data in Social Science Research."
+
+# Data access
+This project uses three datasets. Study 1's dataset can be accessed at this [link](https://doi.org/10.7910/DVN/VSOH5H). Study 2 uses two datasets. The first dataset can be accessed via the same link provided before. You can also download the images directly from Instagram. The second dataset can be requested directly from Twitter [link](https://transparency.twitter.com/en/reports/information-operations.html). Please choose the batch released in October 2018.
 
 # Study 1:
-
-
-
 -  study1_build: extract intermediate low-dimensional vector representation of Study 1(China Protest) and store the features and labels. The key folders and files are:
   - images/: 14,127 images used in Study 1 of the manuscript.
   - bovw/: bag-of-visual-word model. To replicate:
@@ -16,12 +17,27 @@
     - run `extract_features.py` to extract  intermediate low-dimensional vector representation. The extracted features will be saved to "img transform/" folder.
   - `clustering.py` : this python script will run clustering algorithms over all the previous extracted intermediate representations. 
 - Fig1/ ; Fig 4/ ; .... All these folders contain one python script. Run the script and you will get corresponding figure used in the manuscript.
-
 --------------------------------------
-
 Figures we we cannot replicate now:
-
 - Fig 1 (purely random)
-
 - Fig 4 (bag of visual words)
 - FigB5 (resnet)
+
+# Study 2
+## A feature extraction.py
+For each image, this script extracts features from a pre-trained model and saves features in the "img exfeature" folder. If you want to use the hybrid model, please download the model from this [link](https://github.com/GKalliatakis/Keras-VGG16-places365) and place all the relevant scripts in the same folder. The script can also extract features from VGG16 model provided in the Keras package. 
+
+## B combine features.py
+This script combines all the features into one file.
+
+## C PCA.py
+This script conducts principal component analysis on the extract features.
+
+## D kmeans clustering.py
+This script applies k-means clustering to the first 200 dimensions in PCA, with the number of clusters ranging from 5 to 20.
+
+## E copy image.py
+For each cluster in each clustering solution, this script randomly selects 20 images and copies them to the "img cluster" folder.
+
+## F visualize grid.py
+For each clustering solution, this script creates a figure that show the randomly selected 20 images in each cluster.
