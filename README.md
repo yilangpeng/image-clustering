@@ -21,7 +21,7 @@ This project uses three datasets.
       - `train_self_supervised_transfer.sh`: use the DeepCluster but did not train the model by yourself; instead, this script performs transfer learning by using their model to extract the last layer of the CNN model and use that layer as the intermediate representation.
   - `supervised/` : transfer learning based on VGG and ImageNet dataset. 
     - run `extract_features.py` to extract  intermediate low-dimensional vector representation. The extracted features will be saved to "img transform/" folder.
-## Step 2: run clustering algorithms over extracted intermediate vector representations
+## Step 2: run clustering algorithms over extracted intermediate vector representations to obtain label of each image.
   - `clustering.py` : this python script will run clustering algorithms over all the previous extracted intermediate representations.
 ## Step 3: visualization and validation
 - `Fig1/` ; Fig 4/ ; .... All these folders contain one python script. Run the script and you will get corresponding figure or tables used in the manuscript.
